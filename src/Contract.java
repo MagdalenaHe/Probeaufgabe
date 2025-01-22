@@ -31,7 +31,7 @@ public class Contract {
         if (animal == null) {
             throw new IllegalArgumentException("Animal can´t be null");
         }
-        insSum = calcInsRate(tarVar) * animal.getBaseInsureSum();
+        insSum = calcInsFactor(tarVar) * animal.getBaseInsureSum();
         return insSum;
     }
 
@@ -59,7 +59,7 @@ public class Contract {
      * @param tarVar Insurance variant
      * @return variant factor
      */
-    public double calcInsRate(String tarVar) {
+    public double calcInsFactor(String tarVar) {
         return switch (tarVar) {
             case "Kompakt" -> 1.0;
             case "Optimal" -> 1.2;

@@ -35,36 +35,36 @@ class ContractTest {
     }
 
     @Test
-    void calcInsRatePremium() {
+    void calcInsFactorPremium() {
         //Given
         String tarVar = "Premium";
         Animal dog = new Dog("06/05/2017");
         //When
         Contract contractDog = new Contract(tarVar, dog);
         //Then
-        assertEquals(1.4, contractDog.calcInsRate(tarVar));
+        assertEquals(1.4, contractDog.calcInsFactor(tarVar));
     }
 
     @Test
-    void calcInsRateOptimal() {
+    void calcInsFactorOptimal() {
         //Given
         String tarVar = "Optimal";
         Animal dog = new Dog("06/05/2017");
         //When
         Contract contractDog = new Contract(tarVar, dog);
         //Then
-        assertEquals(1.2, contractDog.calcInsRate(tarVar));
+        assertEquals(1.2, contractDog.calcInsFactor(tarVar));
     }
 
     @Test
-    void calcInsRateKompakt() {
+    void calcInsFactorKompakt() {
         //Given
         String tarVar = "Kompakt";
         Animal dog = new Dog("06/05/2017");
         //When
         Contract contractDog = new Contract(tarVar, dog);
         //Then
-        assertEquals(1.0, contractDog.calcInsRate(tarVar));
+        assertEquals(1.0, contractDog.calcInsFactor(tarVar));
     }
 
     @Test
